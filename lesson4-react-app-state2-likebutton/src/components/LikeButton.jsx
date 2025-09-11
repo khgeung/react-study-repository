@@ -16,7 +16,7 @@ function LikeButton() {
     }
   };
 
-  //리셋 버튼 클릭 이벤트 핸들러 : 리셋 버튼 클릭되면 실행될 함수를 정의해서 const에 등록
+  //리셋 버튼 클릭 이벤트 핸들러 : 리셋 버튼 클릭되면 실행될 함수를 정의해서 const에 저장
   const handleReset = () => {
     setIsLiked(false);
     setLikeCount(0);
