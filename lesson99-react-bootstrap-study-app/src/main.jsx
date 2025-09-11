@@ -1,11 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+// Bootstrap CSS를 전역으로 import
+import "bootstrap/dist/css/bootstrap.min.css";
+// 커스텀 CSS는 Bootstrap 다음에 import
 import "./index.css";
 import App from "./App.jsx";
 
-// index.html 의 root div 를 찾아서 렌더링(화면이 보여지게 합니다)
 createRoot(document.getElementById("root")).render(
-  // StrictMode : 개발 모드에만 작동, 오류에 대한 사전 테스트 (오류 로그가 2번씩 나오게 됨)
   <StrictMode>
     <App />
   </StrictMode>
