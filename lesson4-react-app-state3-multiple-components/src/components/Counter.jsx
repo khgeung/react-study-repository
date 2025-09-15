@@ -7,8 +7,11 @@ import "./Counter.css";
     3. 컴포넌트 함수를 다시 실행 (리렌더링)
     4. 새로운 count 즉 상태 값으로 화면 업데이트
 
+    상위(부모) 컴포넌트로부터 전달되는 props 정보를 
+    아래 매개변수를 구조 분해 할당하여 바로 사용한다
+
 */
-function Counter() {
+function Counter({ counterName }) {
   //let count = 0;
   //초기값 0의 의미는 컴포넌트가 처음 렌더링 될 때 상태값
   // count : 현재 상태값을 저장하는 변수
@@ -31,7 +34,9 @@ function Counter() {
 
   return (
     <div className="counter">
-      <h2>카운터:{count}</h2>
+      <h2>
+        {counterName} 카운터:{count}
+      </h2>
       <div className="buttons">
         <button onClick={handleDecrement}>-1</button>
         <button onClick={handleReset}>리셋</button>
