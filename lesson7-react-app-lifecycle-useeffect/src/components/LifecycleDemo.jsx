@@ -4,6 +4,7 @@ const LifecycleDemo = () => {
   const [count, setCount] = useState(0); //count 상태를 위한 state hook
 
   //1. 마운트 시에만 실행 (의존성 빈 배열) : componentDidMount
+  //useEffect(실행될 화살표 함수, 의존성배열);
   useEffect(() => {
     //API 호출, 초기 데이터 설정 등에 사용
     console.log("1번 useEffect:컴포넌트가 마운트되었습니다");
